@@ -6,8 +6,8 @@
 
 const aspectRatio = [4, 3];
 
-const height = 0;
-const width = 923;
+const height = 75;
+const width = 0;
 
 // This function finds whether a value was entered for the height or width, and if there was an error
 function chosenOne() {
@@ -16,16 +16,13 @@ function chosenOne() {
    } else if (width === 0 && height > 0) {
       return 'height';
    } else if (height < 0 || width < 0) {
-      return 1;
+      return 'You have entered an invalid value';
    } else if (height === 0 && width === 0) {
-      return 2;
+      return 'You have not entered a value';
    } else if (height > 0 && width > 0) {
-      return 3;
+      return 'You have entered two values';
    }
 };
-/* 1 means "You entered an invalid value"
-   2 means "You have not entered a value"
-   3 means "You have entered two values" */
 
 // This function is a calculator to find the ratio of the aspect ratio
 function ratioCalculator() {
